@@ -1,0 +1,52 @@
+<!-- Ultimate Game Stash file-->
+<!-- For the regularly updating doc go to https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/ -->
+<!-- Made by Genizy-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jet Rush</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+}
+#unity-canvas {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+</style>
+</head>
+<body>
+<canvas id="unity-canvas"></canvas>
+<script>
+  var buildUrl = "https://cdn.jsdelivr.net/gh/genizy/jet-rush@main/Build";
+  var loaderUrl = buildUrl + "/JetRush.loader.js";
+  var config = {
+    dataUrl: buildUrl + "/JetRush.data",
+    frameworkUrl: buildUrl + "/JetRush.framework.js",
+    codeUrl: buildUrl + "/JetRush.wasm",
+    streamingAssetsUrl: "StreamingAssets",
+    companyName: "DefaultCompany",
+    productName: "Jet Rush",
+    productVersion: "1.0",
+  };
+  var canvas = document.querySelector("#unity-canvas");
+  var script = document.createElement("script");
+  script.src = loaderUrl;
+  script.onload = () => {
+    createUnityInstance(canvas, config).then((unityInstance) => {
+      // success
+    }).catch((message) => {
+      alert(message);
+    });
+  };
+  document.body.appendChild(script);
+</script>
+</body>
+</html>
