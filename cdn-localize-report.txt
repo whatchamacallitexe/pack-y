@@ -1,1 +1,12 @@
-
+BASE SKIP 67.6MB genizy/web-port@main/jelly-drift
+BASE OK bubbls/UGS-Assets@main/jelly-mario -> jelly-mario
+BASE REWRITE jelly-mario
+BASE OK faralong/all@main/jetskirace -> jetski-race
+BASE REWRITE jetski-race
+BASE OK bubbls/UGS-Assets@main/jumbo-mario -> jumbo-mario
+BASE REWRITE jumbo-mario
+BASE OK bubbls/UGS-Assets@dbdca8d3035fa078b774545e33c85a7eb6110088/jumping shell -> jumping-shell
+BASE REWRITE jumping-shell
+BASE SKIP 138.9MB bubbls/UGS-Assets@main/jungle-deer-hunting
+BASE OK faralong/all@main/hitbutton -> just-hit-the-button
+BASE REWRITE just-hit-the-button
