@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<base href="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@dbdca8d3035fa078b774545e33c85a7eb6110088/jumping%20shell/">
+<head>
+<meta charset="utf-8">
+<title>Jumping Shell</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="poki-sdk.js"></script>
+<script src="./progress.js"></script>
+<style>html,body{margin:0;padding:0;height:100%;overflow:hidden}#openfl-content{background:#000;width:100%;height:100%}#progress{position:relative;top:50%;left:50%;transform:translate(-50%,-50%);width:50%}</style>
+</head>
+<body>
+<div id="openfl-content"><progress id="progress" value="0" max="1"></progress></div>
+<script>
+var __filesToLoad={"./Jumping Shell.js":{total:2482661}};var __progressBar;
+var __progressListener=function(p){if(!__progressBar)__progressBar=document.getElementById('progress');if(__progressBar)__progressBar.value=p};
+var __completionCallback=function(){__progressBar.parentNode.removeChild(__progressBar);lime.embed('Jumping Shell','openfl-content',1252,704,{parameters:{}})};
+__loadWithProgress(__filesToLoad,__progressListener,__completionCallback);
+</script>
+</body>
+</html>
