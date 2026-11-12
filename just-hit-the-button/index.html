@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="https://cdn.jsdelivr.net/gh/faralong/all@main/hitbutton/">
+<meta charset="utf-8">
+<title>Just Hit The Button</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<style>body{background:#000;color:#ccc;margin:0;padding:0;overflow:hidden}canvas{display:block;margin:0 auto;image-rendering:optimizeSpeed;touch-action:none}</style>
+</head>
+<body onload="startResizing();">
+<canvas id="canvas" width="1920" height="1080"><p>Your browser doesn't support HTML5 canvas.</p></canvas>
+<script src="html5game/Just Hit The Buttonn.js"></script>
+<script>window.onload=GameMaker_Init;</script>
+<script>
+function startResizing(){resizing();setInterval(resizing,1000)}
+function resizing(){var w=window.innerWidth,h=window.innerHeight,gw=1920,gh=1080,s=Math.min(w/gw,h/gh);var c=document.getElementById('canvas');c.style.width=(gw*s)+'px';c.style.height=(gh*s)+'px'}
+</script>
+</body>
+</html>
