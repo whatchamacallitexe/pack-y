@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<base href="https://cdn.jsdelivr.net/gh/faralong/all@main/jetskirace/">
+<meta charset="utf-8">
+<title>Jetski Race</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="theme/game.css">
+<style>body{margin:0;background:#000;overflow:hidden}#unity-container{display:none;position:absolute;inset:0}#unity-canvas{width:100%;height:100%;display:block}#loadingBlock{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-family:sans-serif;background:#111}</style>
+</head>
+<body>
+<div id="unity-container"><canvas id="unity-canvas"></canvas></div>
+<div id="loadingBlock"><div>Jetski Race<br><span id="progress_text">Game Loading...</span></div></div>
+<script>
+var buildUrl='Build';
+var loaderUrl=buildUrl+'/jetski-race-v25030501.loader.js';
+var config={dataUrl:buildUrl+'/jetski-race-v25030501.data.unityweb',frameworkUrl:buildUrl+'/jetski-race-v25030501.framework.js.unityweb',codeUrl:buildUrl+'/jetski-race-v25030501.wasm.unityweb',streamingAssetsUrl:'StreamingAssets',companyName:'azgames.io',productName:'Jetski Race',productVersion:'25030501'};
+var container=document.getElementById('unity-container'),canvas=document.getElementById('unity-canvas'),loadingBar=document.getElementById('loadingBlock'),progress_text=document.getElementById('progress_text');
+var script=document.createElement('script');script.src=loaderUrl;script.onload=()=>{createUnityInstance(canvas,config,p=>{progress_text.innerText='Downloading file: '+Math.round(p*100)+'%'}).then(()=>{loadingBar.style.display='none';container.style.display='block'}).catch(m=>alert(m))};document.body.appendChild(script);
+</script>
+</body>
+</html>
